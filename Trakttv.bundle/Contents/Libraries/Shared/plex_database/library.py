@@ -181,11 +181,15 @@ class LibraryBase(object):
 
         if type(field) is DateTimeField:
             if not value:
-                return None
+               return None
+
+            if isinstance(value, int):
+               value = datetime.fromtimestamp(value)
+               return TZ_LOCAL.localize(value).astimezone(pytz.utc)
 
             if not isinstance(value, datetime):
-                log.debug('Invalid value provided for DateTimeField: %r (expected datetime instance)', value)
-                return None
+               log.debug('Invalid value provided for DateTimeField: %r (expected datetime instance)', value)
+               return None
 
             if value.tzinfo:
                 # `tzinfo` provided, ignore conversion

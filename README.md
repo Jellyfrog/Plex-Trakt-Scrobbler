@@ -1,7 +1,5 @@
 # Trakt.tv (for Plex)
-Now compatible with the Native Plex Movie Agent (should also be compatible with the upcoming Native Plex TV Agent). If you use the new agents, you require at least PMS version 1.20.1.3213 or higher, and you have to do a metadata refresh on the entire library after upgrading to this version. This plugin should be fully backwards compatible with the earlier supported agents.
-
-I cannot support other issues with the plugin outside of the new agent support.
+This fork has a few patches to keep the plugin functional with the latest Plex updates compared to the original repository. It is working to push playback progress and scrobble episodes, as well as sync (push and pull) watched status and ratings in my local instance. I cannot verify it works for all usecases, so support will be limited outside of trying to figure out how to patch the plugin with workarounds for future Plex updates.
 
 [![](https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat-square)][license] [![](https://img.shields.io/requires/github/fuzeman/Plex-Trakt-Scrobbler.svg?style=flat-square)][requires.io] [![](https://img.shields.io/scrutinizer/build/g/fuzeman/Plex-Trakt-Scrobbler.svg?style=flat-square)][scrutinizer] [![](https://img.shields.io/scrutinizer/g/fuzeman/Plex-Trakt-Scrobbler.svg?style=flat-square)][scrutinizer] [![](https://img.shields.io/scrutinizer/coverage/g/fuzeman/Plex-Trakt-Scrobbler.svg?style=flat-square)][scrutinizer]  
 [![](https://img.shields.io/gitter/room/trakt/Plex-Trakt-Scrobbler.svg?style=social)][gitter.im]
